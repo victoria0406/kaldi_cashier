@@ -3,8 +3,10 @@ import {
     HashRouter,
     Route,
     Routes,
+    Link,
   } from "react-router-dom";
 import CustomerManager from "./customer/CustomerManager";
+import Main from "./customer/Main";
 
 function App() {
     return (

@@ -18,6 +18,7 @@ function Order(props){
     return(
         <div>
             <div>주문을 기다리는 중입니다.</div>
+            <div>대기번호{props.order_num}번 손님</div>
             <div>주문 내역</div>
             {menus.map((el,index)=>{
                 return(
