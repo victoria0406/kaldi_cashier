@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# 칼디 캐셔: K-siren order
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/81007362/152091201-a53b35d6-9fa4-45ec-9df0-c6d92499df67.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+## 제작 목적
+칼디는 카페 및 커피 동아리이자, 내가 활동한 동아리이다. 칼디에서는 축제를 하는 기간에는 동아리 음료를 판다. 그 때, 일부 동아리원들은 캐셔 역할을 하고, 주문 내역은 종이에 적는다. 나는 이게 전산화하기 충분하다는 생각을 했고, 이를 여러 팀원이 공유하면 더 편할 것이라 생각했다. 따라서 나는 오더링 시스템을 만들 것이다. 이에 대해서는 실시간 관리가 필요하기 때문에, 다른 것보다 백엔드에 대한 이해가 많이 될 것이라 판단하였다. 이번 사이드 플젝은 우선적으로 백엔드를 이해하기 위한 수단이기 때문에, UI UX는 스타벅스를 차용할 것이다. 돈 내는 것은 스스로 하라고 하자...
+스타벅스처럼 어플리케이션을 활용하고 싶지만, 단기적으로 사용할 것이며, 사람들의 접근성을 높여야 한다는 취지 때문에 어플리케이션보다는 모바일 웹이 적합하다고 판단하였다.
 
-### `npm start`
+## 기술 스택
+backend: Node.js  
+몰입캠프 때 다들 node.js를 사용해서 참고 자료가 많다. 웹을 시도해보지 않은 나에게는 최적의 선택!  
+frontend: react  
+그냥.. 이제 웹하면 리액트 밖에 안 떠오르는 리액트 쓸꺼다... 실사용에 대한 계획이 없으면 그냥 앱 만들고 싶은데...
+DB: MongoDB  
+스키마가 없어서 내 맘대로 엑셀화가 필요하다는 나의 목적에 적합함.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 제작 단계
+STEP1: 기본적인 프론트엔드 틀을 만든다. 구매자에게는 메뉴를 나열하고, 고르고, 예약할 수 있는 기능을 제공하고, 판매자에게는 주문 현황을 알 수 있는 정보를 제공한다.  
+STEP2: 기본적인 백엔드 틀을 만든다. 구매자에게서 예약 내역이 올라오면, 이를 판매자에게 전달하고, 판매자가 메뉴를 제작할 시, 승인 버튼을 눌러 이를 구매자에게 전달하는 기능  
+STEP3: 주문자의 정보 및 가격등을 엑셀화 시키는 과정. 나중에 회계 처리에서 유용하니까 쓰고 싶음(사실 미래의 회계 담당자의 고생을 덜기 위한 행동)  
+STEP4: UI UX 다듬기. 구매자는 이쁘게, 판매자는 버튼이랑 글씨 큼직큼직하게 하면 됨  
+STEP5: (추가 사항) 동아리 관리 사이드 추가. 동아리원 일정 정리 및 매뉴얼 확인하는 추가 사이트 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 고민 사항
+1. 효율적인 정보 전달
+2. 새로고침 등 정보가 리셋되는 환경에 대비하자 --> 장바구니는 로컬스토리지에 저장
 
-### `npm test`
+## 참고 자료
+[사이렌 오더에 대한 코드](https://github.com/Dev-HyunSang/Starbucks-Siren-Order-Services): 백엔드를 어떻게 처리하고 구성할지에 대한 레퍼런스가 될 듯
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 개발 일지
+2022.02.02: 처음 계획을 세우고 작업을 할 예정이다. 제발 2월 동안 힘 빠지지 말자...
