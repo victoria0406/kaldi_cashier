@@ -1,0 +1,9 @@
+.menu_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#bag{
+    
+}
